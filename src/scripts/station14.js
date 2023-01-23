@@ -13,6 +13,16 @@ function buildFullName(data) {
     // Station14の問題はこちらです。想定する答えをここを書いてください。
     // 氏名がわかるようにしつつ、半角スペースで繋いでください。
     // またtest配列のそれぞれのオブジェクトに対して、full_nameのプロパティが追加されるように実装すること
+    var name = data.family_name + " " + data.first_name;
+    let finalResult = new Object();
+
+    finalResult.id = data.id;
+    finalResult.full_name = name;
+    finalResult.first_name = data.first_name;
+    finalResult.family_name = data.family_name;
+    finalResult.affilication = data.affilication;
+    finalResult.is_student = data.is_student;
+    return finalResult;
 }
 
 // 出力が想定される答え
